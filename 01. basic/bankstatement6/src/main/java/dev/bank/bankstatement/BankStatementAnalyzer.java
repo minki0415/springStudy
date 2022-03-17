@@ -7,16 +7,21 @@ import java.nio.file.Paths;
 import java.time.Month;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import dev.bank.bankstatement.data.BankStatementParser;
 import dev.bank.bankstatement.model.BankTransaction;
 import dev.bank.bankstatement.service.BankStatementProcessor;
 
-
+@Service // @Componet 처럼 spring이 관리하도록 등록
 public class BankStatementAnalyzer {
     private static final String RESOURCES = "src/main/resources/"; // resources 파일 경로
 
     private final BankStatementParser bankStatementParser;
 
+    // 생성자 메서드
+    @Autowired
     public BankStatementAnalyzer(BankStatementParser bankStatementParser) {
         this.bankStatementParser = bankStatementParser;
     }

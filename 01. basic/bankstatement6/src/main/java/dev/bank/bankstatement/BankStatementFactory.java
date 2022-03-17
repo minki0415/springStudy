@@ -15,9 +15,9 @@ public class BankStatementFactory {
     //     return new BankStatementCSVParser();
     // }
 
-    @Bean // 1. 빈 구성 정보 내 등록되어 있는 빈
-    public BankStatementAnalyzer bankStatementAnalyzer(BankStatementCSVParser bankStatementCSVParser) {
-        BankStatementAnalyzer bankStatementAnalyzer = new BankStatementAnalyzer(bankStatementCSVParser);
-        return bankStatementAnalyzer;
-    }
+    // @Bean // 1. 빈 구성 정보 내 등록되어 있는 빈
+    // public BankStatementAnalyzer bankStatementAnalyzer(BankStatementCSVParser bankStatementCSVParser) {
+    //     BankStatementAnalyzer bankStatementAnalyzer = new BankStatementAnalyzer(bankStatementCSVParser);
+    //     return bankStatementAnalyzer;
+    // }
 }

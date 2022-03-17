@@ -17,6 +17,7 @@ public class MainApplication {
         // BankStatementAnalyzer bankStatementAnalyzer = bankStatementFactory.bankStatementAnalyzer();
 
         // After Spring
+        // Bean 구성 정보(Bean 객체 리스트)를 스프링한테 넘김
         final ApplicationContext applicationContext = new AnnotationConfigApplicationContext(BankStatementFactory.class);
         BankStatementAnalyzer bankStatementAnalyzer = applicationContext.getBean(BankStatementAnalyzer.class);
 

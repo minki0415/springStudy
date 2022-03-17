@@ -5,11 +5,13 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import dev.bank.bankstatement.model.BankTransaction;
 
-@Component
+@Component("bankStatementParser")
+// @Primary
 public class BankStatementCSVParser implements BankStatementParser {
 
     private static final DateTimeFormatter DATE_PATTERN = DateTimeFormatter.ofPattern("dd-MM-yyyy");
